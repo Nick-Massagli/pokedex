@@ -20,7 +20,7 @@ window.onload = async function() {
     console.log(pokedex);
 }
 
-async function getPokemon(num) {
+async function getPokemon(num) { //retreives the correct json data for the selected pokemon
     let url = "https://pokeapi.co/api/v2/pokemon/" + num.toString();
 
     let res = await fetch(url);
@@ -41,7 +41,7 @@ async function getPokemon(num) {
 
 }
 
-function updatePokemon(){
+function updatePokemon(){ //updates the  information fields in the HTML to the last selected pokemon
     document.getElementById("pokemon-img").src = pokedex[this.id]["img"];
 
     //clear previous type
